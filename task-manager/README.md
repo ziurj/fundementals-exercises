@@ -16,5 +16,6 @@ This task manager was created *(with zero assistance)* based on the exercise art
 
 ## Demo
 
-Insert gif or link to demo
+https://github.com/user-attachments/assets/44c07385-c0f1-4912-99a1-240428a822a1
+
 
