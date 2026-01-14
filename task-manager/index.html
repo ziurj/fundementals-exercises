@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="task-manager__container">
+      <p class="task-manager__title">
+        Task Manager
+      </p>
+      <div class="task-manager-options__container">
+        <input type="text" placeholder="What needs to be done?" class="task-manager__input js-input-field">
+        <button class="task-manager-add__button js-add-button">Add Task</button>
+      </div>
+      <div class="tasks__container js-tasks-container">
+        <div class="task__container">
+          <button class="task__check">✓</button>
+          <p class="task__name">Task A</p>
+          <button type="button" name="button" class="task__remove">Remove</button>
+        </div>
+        <div class="task__container">
+          <button class="task__check">✓</button>
+          <p class="task__name">Task B</p>
+          <button type="button" name="button" class="task__remove">Remove</button>
+        </div>
+         <div class="task__container">
+          <button class="task__check">✓</button>
+          <p class="task__name task__completed">Task C</p>
+          <button type="button" name="button" class="task__remove">Remove</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
