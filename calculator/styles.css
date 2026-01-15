@@ -7,8 +7,13 @@
 
 body {
   /* Come back and make this a gradient */
-  background-color: #0086ff;
+  background: #0086FF;
+  background: linear-gradient(90deg, rgba(0, 134, 255, 1) 0%, rgba(125, 194, 255, 1) 100%);
   color: rgb(39, 39, 39);
+}
+
+button { 
+  cursor: pointer;
 }
 
 .calculator {
@@ -21,6 +26,7 @@ body {
   margin-top: 200px;
   padding: 12px 2px;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
 }
 
 .calculations__container {
@@ -31,9 +37,12 @@ body {
   font-weight: bold;
   text-align: right;
   background-color: #f7f7f7;
+  overflow: scroll;
+  white-space: nowrap;
 }
 
-.calculator div {
+/* Make this not add for the last row (equals row) */
+.calculator div { 
   margin-bottom: 10px;
 }
 
@@ -44,7 +53,7 @@ body {
   gap: 8px;
 }
 
-.operator-button, .number {
+.number {
   padding: 8px 12px;
   flex: 1; 
   border: none;
@@ -53,13 +62,25 @@ body {
   font-weight: bold;
 }
 
+.number:hover {
+  background-color: #9fbcd4;
+}
+
 .operator-button {
   background-color: #ffd166;
+}
+
+.operator-button:hover {
+  background-color: #d3ad53;
 }
 
 .clear-button {
   background-color: #f55c47;
   color: white;
+}
+
+.clear-button:hover {
+  background-color: #d8513f;
 }
 
 .operator-equals-button {
@@ -68,4 +89,8 @@ body {
   align-self: flex-start;
   font-weight: bold;
   grid-column: span 2;
+}
+
+.operator-equals-button:hover {
+  background-color: #08a077;
 }
