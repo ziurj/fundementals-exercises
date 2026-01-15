@@ -3,6 +3,9 @@
   This solution is pretty messy.
   Still has some issues, but good enough for now lol.
 
+
+  Issue: Still has some ops issues when odds ex: [ "200", "/", "2", "*", "3" ]
+  
 */
 
 let currentTotal = 0;
