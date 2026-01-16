@@ -1,10 +1,6 @@
 /*
 
   This solution is pretty messy.
-  Still has some issues, but good enough for now lol.
-
-
-  Issue: Still has some ops issues when odds ex: [ "200", "/", "2", "*", "3" ]
   
 */
 
@@ -144,7 +140,7 @@ function filterAfterCalculation(operatorIndex, stepCalc) {
   for(let i = 0; i < calculation.length; i++) {
     if (i === operatorIndex - 1) {
       newArr.push(stepCalc);
-      i += 3;
+      i += 2;
       continue;
     }
 
