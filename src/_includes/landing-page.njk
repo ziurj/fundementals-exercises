@@ -1,0 +1,35 @@
+---
+
+layout: 'base.njk'
+
+---
+
+{% include 'note-section.njk' %}
+{# Going to need a loop to pass all the projects through so some data struct is going to be needed here. #}
+{%- for project in collections.project -%}
+  <section class="project" id="{{ project.data.internalProjectLinkID }}">
+    <div class="project__container container">
+      <h2 class="project__name">{{ project.data.projectName }}</h2>
+      <div class="project__video__container">
+        <video controls class="project__video">
+          <source src="{{ project.data.videoLink }}" type="video/mp4">
+          {# Comment for if video not loading for user #}
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="project__links__container">
+        <a href="{{ project.data.linkToDemo }}" class="project__link-button">Demo</a>
+        <a href="{{ project.data.linkToSource }}" class="project__link-button github-button">Source code</a>
+      </div>
+      <div class="project__features__container">
+        <h3 class="project__features-title">Features</h3>
+        <ul class="project__features-list">
+          {%- for feature in project.data.features -%}
+            <li class="project__feature-item">{{ feature }}</li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      
+    </div>
+  </section>
+{%- endfor -%}
