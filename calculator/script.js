@@ -60,39 +60,31 @@ function addToCalculation(value) {
 // Make sure to find a pemdas solutions such as looking for * || / first.
 function processCalculation() {
   // First pass will be for Mult-Div
-  for (let i = 0; i < calculation.length - 1; i++) {
-    let currentValue = calculation[i];
-
-    if (currentValue === '*' || currentValue === '/') {
-      if (i === 0) {
-        determineCalculation(currentValue, i, currentTotal);
-      } else {
-        determineCalculation(currentValue, i);
-      }
-
-      i = -1;
-    }
-  }
+  arrayPass("*", "/");
 
   // Second pass will be for Add-Sub
-  for (let i = 0; i < calculation.length - 1; i++) {
-    let currentValue = calculation[i];
-
-    if (currentValue === '+' || currentValue === '-') {
-      if (i === 0) {
-        determineCalculation(currentValue, i, currentTotal);
-      } else {
-        determineCalculation(currentValue, i);
-      }
-
-      i = -1;
-    }
-  }
+  arrayPass("+", "-");
 
   let showResult = true;
   updateCalculationsText(showResult);
 
   calculation = [];
+}
+
+function arrayPass(operator1, operator2) {
+  for (let i = 0; i < calculation.length - 1; i++) {
+    let currentValue = calculation[i];
+
+    if (currentValue === operator1 || currentValue === operator2) {
+      if (i === 0) {
+        determineCalculation(currentValue, i, currentTotal);
+      } else {
+        determineCalculation(currentValue, i);
+      }
+
+      i = -1;
+    }
+  }
 }
 
 function determineCalculation(value, index, passedFirstValue = Infinity) {
