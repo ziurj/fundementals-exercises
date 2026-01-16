@@ -12,22 +12,7 @@
 <body>
   {% include 'navigation.njk' %}
   {% include 'hero.njk' %}
-  {% include 'note-section.njk' %}
   {{ content | safe }}
-
-  {# Going to need a loop to pass all the projects through so some data struct is going to be needed here. #}
-  {%- for project in collections.project -%}
-    <section class="project">
-      <div class="project__container container">
-        <h2 class="project__name">{{ project.data.projectName }}</h2>
-        <video width="960" height="540" controls class="project__video">
-          <source src="{{ project.data.videoLink }}" type="video/mp4">
-          {# Comment for if video not loading for user #}
-          Your browser does not support the video tag.
-        </video>
-        <h3 class="project__features-title">Features</h3>
-      </div>
-    </section>
-  {%- endfor -%}
+  {% include 'footer.njk' %}
 </body>
 </html>
