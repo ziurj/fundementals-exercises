@@ -4,8 +4,9 @@
       <a href="/" class="navigation__creator-name">ziurj</a>
       {# <p class="navigation__project-name">Foundational HTML, CSS, and JS Projects</p> #}
       <ul class='navigation__links'>
-        <li><a href="/" class='navigation__link'>Task Manager</a></li>
-        <li><a href="/" class='navigation__link'>Simple Calculator</a></li>
+        {%- for project in collections.project -%}
+          <li><a href="#{{project.data.internalProjectLinkID}}" class='navigation__link'>{{ project.data.projectName }}</a></li>
+        {%- endfor -%}
         <li><a href="https://github.com/ziurj/fundementals-exercises" class='navigation__link highlighted__button'>Source Code</a></li>
       </ul>
     </nav>
