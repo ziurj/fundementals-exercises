@@ -1,14 +1,12 @@
-<header>
-  <div class="navigation__container">
-    <nav class='navigation'>
-      <a href="/" class="navigation__creator-name">ziurj</a>
-      {# <p class="navigation__project-name">Foundational HTML, CSS, and JS Projects</p> #}
-      <ul class='navigation__links'>
-        {%- for project in collections.project -%}
-          <li><a href="#{{project.data.internalProjectLinkID}}" class='navigation__link'>{{ project.data.projectName }}</a></li>
-        {%- endfor -%}
-        <li><a href="https://github.com/ziurj/fundementals-exercises" class='navigation__link highlighted__button'>Source Code</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<div class="navigation__container">
+  <nav class='navigation'>
+    <a href="/" class="navigation__creator-name">ziurj</a>
+    {# <p class="navigation__project-name">Foundational HTML, CSS, and JS Projects</p> #}
+    <ul class='navigation__links'>
+      {%- for project in collections.project -%}
+        <li><a href="#{{project.data.internalProjectLinkID}}" class='navigation__link'>{{ project.data.projectName }}</a></li>
+      {%- endfor -%}
+      <li><a href="https://github.com/ziurj/fundementals-exercises" class='navigation__link highlighted__button'>Source Code</a></li>
+    </ul>
+  </nav>
+</div>
