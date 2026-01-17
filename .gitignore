@@ -2,7 +2,7 @@
 node_modules/
 
 # Eleventy build output
-public/
+# public/
 _site/
 
 # Logs
