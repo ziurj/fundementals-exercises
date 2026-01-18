@@ -1,0 +1,8 @@
+<section class="hero">
+  <div class="hero__container container">
+    <h1 class="hero__heading">{{ heroHeading }}</h1>
+    {% if heroSubtext %}
+      <p class="hero__subtext">{{ heroSubtext | safe }}</p>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,24 @@
+{
+  "name": "fundementals-exercises",
+  "version": "1.0.0",
+  "description": "These are small exercises I have done on my own based on specific requirements or examples found online. Doing these to familiarize myself with the basics.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziurj/fundementals-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziurj/fundementals-exercises/issues"
+  },
+  "homepage": "https://github.com/ziurj/fundementals-exercises#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

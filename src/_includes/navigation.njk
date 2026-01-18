@@ -1,0 +1,15 @@
+<div class="navigation__container">
+  <nav class='navigation'>
+    <a href="/" class="navigation__creator-name">ziurj</a>
+    {# <p class="navigation__project-name">Foundational HTML, CSS, and JS Projects</p> #}
+    <ul class='navigation__links navigation__links__hidden'>
+      {%- for project in collections.project -%}
+        <li><a href="/#{{project.data.internalProjectLinkID}}" class='navigation__link'>{{ project.data.projectName }}</a></li>
+      {%- endfor -%}
+      <li><a href="https://github.com/ziurj/fundementals-exercises" class='navigation__link highlighted__button'>Source Code</a></li>
+    </ul>
+    <a href="javascript:void(0);" onclick="showNavBar()" class="hamburger-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+</div>

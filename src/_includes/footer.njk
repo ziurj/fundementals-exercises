@@ -1,0 +1,14 @@
+<footer class="footer">
+  <div class="footer__container container">
+    <h2 class="footer__heading">Projects</h2>
+    <div class="footer__divider"></div>
+    <ul class="footer__project-links">
+      {%- for project in collections.project -%}
+        <li><a href="#{{ project.data.internalProjectLinkID }}" class="footer__project-link">{{ project.data.projectName }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="footer__author__container">
+    Made by <a href="https://github.com/ziurj" class="footer__author">Jose A. Ruiz</a>
+  </div>
+</footer>

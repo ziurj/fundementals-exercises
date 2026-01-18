@@ -1,0 +1,19 @@
+---
+
+layout: 'demo-page.njk'
+heroHeading: Task Manager Demo
+script: task-manager
+styles: task-manager-styles
+
+---
+
+<div class="task-manager__container">
+  <p class="task-manager__title">
+    Task Manager
+  </p>
+  <div class="task-manager-options__container">
+    <input type="text" placeholder="What needs to be done?" class="task-manager__input js-input-field">
+    <button class="task-manager-add__button js-add-button">Add Task</button>
+  </div>
+  <div class="tasks__container js-tasks-container"></div>
+</div>
