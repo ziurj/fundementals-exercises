@@ -11,7 +11,7 @@
   {% if styles %}
     <link rel="stylesheet" href=/styles/{{ styles }}.css>
   {% endif %}
-
+  <script src="https://kit.fontawesome.com/91c970a70b.js" crossorigin="anonymous"></script>
 </head>
 <body>
   {% include 'navigation.njk' %}
@@ -23,5 +23,6 @@
   {% if script %}
     <script type="module" src=/scripts/{{ script }}.js></script>
   {% endif %}
+  <script src='/scripts/hamburger-menu.js'></script>
 </body>
 </html>
